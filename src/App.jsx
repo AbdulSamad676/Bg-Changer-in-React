@@ -43,6 +43,15 @@ function App() {
 						>
 							Green
 						</button>
+						<button
+							onClick={() => {
+								setColor('purple');
+							}}
+							className='outline-none px-3 py-2 rounded-xl'
+							style={{ backgroundColor: 'purple' }}
+						>
+							Purple
+						</button>
 					</div>
 				</div>
 			</div>
