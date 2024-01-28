@@ -11,18 +11,20 @@ function App() {
 		{ name: 'Yellow', color: 'yellow' },
 		{ name: 'Gray', color: 'gray' },
 		{ name: 'Orange', color: 'orange' },
+		{ name: 'Default Color', color: 'olive' },
 	];
 
 	let [color, setColor] = useState('olive');
 	return (
 		<>
 			<div
-				className=' w-full h-screen'
+				className=' w-full h-screen pt-10'
 				style={{ backgroundColor: color }}
 			>
 				<h3 className='text-center text-white text-3xl text-bold pt-10'>
 					Click on the Button to select Color
 				</h3>
+
 				<div className=' fixed flex flex-wrap justify-center bottom-12 inset-x-0 px-2'>
 					{/* <h2>test</h2> */}
 					<div className='flex flex-wrap justify-center text-white text-bold gap-3 bg-white px-3 py-2 rounded 3xl'>
