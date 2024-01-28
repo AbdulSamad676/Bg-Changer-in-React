@@ -3,6 +3,16 @@ import { useState } from 'react';
 import './App.css';
 
 function App() {
+	let colors = [
+		{ name: 'Red', color: 'red' },
+		{ name: 'Blue', color: 'blue' },
+		{ name: 'Green', color: 'green' },
+		{ name: 'Purple', color: 'purple' },
+		{ name: 'Yellow', color: 'yellow' },
+		{ name: 'Gray', color: 'gray' },
+		{ name: 'Orange', color: 'orange' },
+	];
+
 	let [color, setColor] = useState('olive');
 	return (
 		<>
@@ -16,7 +26,20 @@ function App() {
 				<div className=' fixed flex flex-wrap justify-center bottom-12 inset-x-0 px-2'>
 					{/* <h2>test</h2> */}
 					<div className='flex flex-wrap justify-center text-white text-bold gap-3 bg-white px-3 py-2 rounded 3xl'>
-						<button
+						{colors?.map(item => {
+							return (
+								<button
+									onClick={() => {
+										setColor(item.color);
+									}}
+									className='outline-none px-3 py-2 rounded-xl'
+									style={{ backgroundColor: item.color }}
+								>
+									{item.name}
+								</button>
+							);
+						})}
+						{/* <button
 							onClick={() => {
 								setColor('red');
 							}}
@@ -87,7 +110,7 @@ function App() {
 							style={{ backgroundColor: 'pink' }}
 						>
 							Pink
-						</button>
+						</button> */}
 					</div>
 				</div>
 			</div>
